@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
-
-        // Optional: Animate the burger icon into a cross
         burger.classList.toggle('toggle');
     });
 });
