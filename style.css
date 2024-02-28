@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     overflow-x: hidden;
-    background: #111;
+    background: #fff;
 }
 
 nav {
@@ -47,6 +47,11 @@ nav {
     text-decoration: none;
     padding: 1rem;
     font-size: 20px;
+}
+
+/* specifically need to remove the ::marker */
+.nav-links li::marker {
+    content: none; /* Removes the marker */
 }
 
 .burger {
@@ -99,6 +104,54 @@ nav {
 .toggle .line2 {
     opacity: 0;
 }
+
+.blog-post {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-header, .post-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    margin: 0;
+    color: #333;
+}
+
+.post-meta {
+    color: #666;
+    font-style: italic;
+}
+
+.post-content {
+    text-align: justify;
+}
+
+.post-content h3 {
+    color: #444;
+}
+
+.post-footer p {
+    margin: 0;
+    color: #777;
+}
+
+.post-footer a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.post-footer a:hover {
+    text-decoration: underline;
+}
+
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
