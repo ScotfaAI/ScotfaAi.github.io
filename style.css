@@ -39,6 +39,11 @@ nav {
 
 .burger {
     display: none;
+    flex-direction: column;
+    justify-content: space-around; /* Adjusts space between the lines */
+    height: 24px; /* Adjust height to fit the icon size */
+    width: 30px; /* Adjust width to fit the icon size */
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -61,7 +66,12 @@ nav {
     }
 
     .burger {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; /* Adjusts space between the lines */
+        height: 24px; /* Adjust height to fit the icon size */
+        width: 30px; /* Adjust width to fit the icon size */
+        cursor: pointer;
     }
 
     .nav-active {
@@ -69,13 +79,16 @@ nav {
     }
 }
 
+
+
 .burger div {
-    width: 25px;
-    height: 3px;
+    width: 25px; /* Width of each line */
+    height: 3px; /* Height of each line */
     background: white;
-    margin: 5px;
+    margin: 0 auto; /* Center lines horizontally */
     transition: all 0.3s ease;
 }
+
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
