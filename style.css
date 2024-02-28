@@ -199,4 +199,13 @@ nav {
     color: #666;
     font-style: italic;
 }
+.notes a {
+    color: #0077cc; /* Example link color */
+    text-decoration: underline; /* Underline for clarity */
+}
+
+.notes a:hover {
+    color: #0056b3; /* Darker color on hover for interaction feedback */
+}
+
 
