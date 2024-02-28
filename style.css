@@ -39,11 +39,6 @@ nav {
 
 .burger {
     display: none;
-    flex-direction: column;
-    justify-content: space-around; /* Adjusts space between the lines */
-    height: 24px; /* Adjust height to fit the icon size */
-    width: 30px; /* Adjust width to fit the icon size */
-    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,12 +61,7 @@ nav {
     }
 
     .burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; /* Adjusts space between the lines */
-        height: 24px; /* Adjust height to fit the icon size */
-        width: 30px; /* Adjust width to fit the icon size */
-        cursor: pointer;
+        display: block;
     }
 
     .nav-active {
