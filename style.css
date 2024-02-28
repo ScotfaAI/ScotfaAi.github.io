@@ -152,3 +152,51 @@ nav {
 .post-footer a:hover {
     text-decoration: underline;
 }
+
+.todo-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.todo-entry {
+    margin-bottom: 20px;
+}
+
+.todo-title {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.sub-objectives {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-objective {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sub-title {
+    font-weight: bold;
+    color: #0077cc;
+}
+
+.notes {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+    color: #666;
+    font-style: italic;
+}
+
