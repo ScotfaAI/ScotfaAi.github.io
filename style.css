@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     overflow-x: hidden;
-    background: #fff;
+    background: #ffe;
 }
 
 nav {
@@ -23,24 +23,21 @@ nav {
     font-size: 20px;
 }
 
-
 .nav-links {
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
     align-items: center;
-    list-style: none; /* Remove bullet points */
+    list-style: none;
 }
+
 .nav-links li {
-    margin-left: 20px; /* Add some space between links */
+    margin-left: 20px;
 }
 
-/* Styles to remove bullet points and adjust layout on all screens */
-.nav-links,
-.nav-links ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+.nav-links, .nav-links ul {
+    list-style-type: none;
+    padding: 0;
 }
-
 
 .nav-links a {
     color: white;
@@ -49,75 +46,65 @@ nav {
     font-size: 20px;
 }
 
-/* specifically need to remove the ::marker */
 .nav-links li::marker {
-    content: none; /* Removes the marker */
+    content: none;
 }
 
 .burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 24px; /* Control the total height of the burger icon */
-    width: 30px; /* Control the width of the burger icon */
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s linear;
-}
-
-/* Correct the toggle transformation for a symmetrical X */
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-3px, 8px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-3px, -8px);
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
     .nav-links {
-        position: fixed; /* Use fixed to keep it relative to the viewport */
+        position: fixed;
         right: 0;
-        top: 8vh; /* Adjust this value as needed */
+        top: 8vh;
         height: 92vh;
         background: #333;
         display: flex;
         flex-direction: column;
-        justify-content: start; /* Align items to start from top */
+        justify-content: start;
         align-items: center;
-        width: 50%; /* Adjust width as needed */
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        padding-top: 20px; /* Add padding at the top if needed */
+        padding-top: 20px;
     }
 
     .nav-links a {
         padding: 10px;
-        text-align: center; /* Ensure links are centered */
-        width: 100%; /* Make links full width for better tap targets */
+        text-align: center;
+        width: 100%;
     }
 
-    /* Further adjustments to ensure visibility and alignment */
     .burger {
-        display: block;
-        z-index: 2; /* Ensure burger is clickable above other content */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s linear;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-3px, 8px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-3px, -8px);
     }
 }
-
-
-
-
-
-
 
 .blog-post {
     font-family: Arial, sans-serif;
@@ -165,5 +152,3 @@ nav {
 .post-footer a:hover {
     text-decoration: underline;
 }
-
-
