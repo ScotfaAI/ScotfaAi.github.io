@@ -23,12 +23,24 @@ nav {
     font-size: 20px;
 }
 
+
 .nav-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end; /* Align items to the right */
     align-items: center;
-    width: 100%;
+    list-style: none; /* Remove bullet points */
 }
+.nav-links li {
+    margin-left: 20px; /* Add some space between links */
+}
+
+/* Styles to remove bullet points and adjust layout on all screens */
+.nav-links,
+.nav-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
 
 .nav-links a {
     color: white;
