@@ -55,55 +55,69 @@ nav {
 }
 
 .burger {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px; /* Control the total height of the burger icon */
+    width: 30px; /* Control the width of the burger icon */
+    cursor: pointer;
 }
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 92vh;
-        top: 8vh;
-        background: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    
-    .nav-links a {
-        padding: 10px;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .nav-active {
-        transform: translateX(0);
-    }
-}
-
-
 
 .burger div {
-    width: 25px; /* Width of each line */
-    height: 3px; /* Height of each line */
-    background: white;
-    margin: 0 auto; /* Center lines horizontally */
-    transition: all 0.3s ease;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s linear;
 }
 
-
+/* Correct the toggle transformation for a symmetrical X */
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-3px, 8px);
 }
 
 .toggle .line2 {
     opacity: 0;
 }
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-3px, -8px);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed; /* Use fixed to keep it relative to the viewport */
+        right: 0;
+        top: 8vh; /* Adjust this value as needed */
+        height: 92vh;
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: start; /* Align items to start from top */
+        align-items: center;
+        width: 50%; /* Adjust width as needed */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 20px; /* Add padding at the top if needed */
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center; /* Ensure links are centered */
+        width: 100%; /* Make links full width for better tap targets */
+    }
+
+    /* Further adjustments to ensure visibility and alignment */
+    .burger {
+        display: block;
+        z-index: 2; /* Ensure burger is clickable above other content */
+    }
+}
+
+
+
+
+
+
 
 .blog-post {
     font-family: Arial, sans-serif;
@@ -153,6 +167,3 @@ nav {
 }
 
 
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
