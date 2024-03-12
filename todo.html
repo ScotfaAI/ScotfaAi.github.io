@@ -110,22 +110,24 @@
             <li class="sub-objective">
                 <span class="sub-title">Best focus</span>
                 <div class="notes">
-                    It would be better if we took the brightest spot, took a cell sized roi around it and then got max std from the planes of just that roi.
+                    It would be better if we took the brightest spot, took a cell sized roi around it and then got max std from the planes of just that roi. <br>
+                    There is an issue here where if there is 2 dividing cells at different heigts it will struggle
                 </div>
             </li>
             <li class="sub-objective">
                 <span class="sub-title"> Batch input</span>
                 <div class="notes">
-                    Notes: Show tifs in folder of tifs. How can we speed this up? <br>
+                    Notes: How can we speed this up? <br>
                     We need to change how the model runs to do it all at once then post process it <br>
-                    It is probably best to just remove the built in cv tracking, seems expensive and not worth <br>
+                    Validate
 
                 </div>
             </li>
             <li class="sub-objective">
                 <span class="sub-title">Bugs</span>
                 <div class="notes">
-                    Next page pushes exclude to the top, fixed but now on mac seeing a small delay in rendering. <br>
+                    New method not boxes appearing right, shoudl be xywh<br>
+                    Need yolo output <br>
                     Last set in 2 not there, first set in 3 not there via model, <br>
                     image 284 stops to early in series 4, image 281 starts too late, they are the same ffs <br>
                     Not getting both cells in anaphase
