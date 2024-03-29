@@ -237,6 +237,38 @@ nav {
     color: #333;
 }
 
+/* Adjustments for the day blocks to be more flexible */
+.day {
+    /* Set a min-width for larger screens and ensure it doesn't grow too big */
+    flex: 1 1 200px; /* Allows wrapping */
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: calc(100% - 20px); /* Ensures some margin */
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .week-container {
+        flex-direction: column;
+        align-items: center; /* Center the day blocks for aesthetics */
+    }
+
+    .day {
+        /* Make each day take up nearly the full width */
+        flex-basis: auto; /* Reset any specific basis */
+        width: 90%; /* Adjust based on your preference for margins */
+        max-width: none; /* Remove the max-width constraint */
+    }
+
+    /* Modal adjustments for better visibility on small screens */
+    .modal-content {
+        width: 95%;
+        margin: 10% auto; /* Center the modal more effectively */
+    }
+}
+
+
 .task {
     background-color: #eaeaea;
     padding: 10px;
@@ -277,4 +309,16 @@ nav {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.day h3 {
+    margin-bottom: 0.5rem; /* Reduced bottom margin for closer spacing to the date */
+    color: #333;
+}
+
+.day p {
+    font-size: 0.8rem; /* Smaller font size for the date */
+    margin-top: 0; /* Remove top margin to reduce space above the date */
+    margin-bottom: 1rem; /* Reduced bottom margin to decrease vertical spacing */
+    color: #666; /* Optional: Adjust the color to differentiate the date from other text */
 }
