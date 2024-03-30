@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderedDays = daysOfWeek.slice(todayDayIndex).concat(daysOfWeek.slice(0, todayDayIndex));
 
     const tasksDetails = {
-        'Friday': ['Work AM - Check 3i slidebook6reader issue.', 'Work PM - Fix lionel C drive storage.', 'Switch Games - Mario Bros.'],
-        'Saturday': ['Work AM - Cell tools output to Yolo format','Vitcoria\'s Family - Bring Easter eggs'],
+        'Friday': ['Align lattice finder - inverted epiflourescent', 'Drive down to kent - Pizza dinner, can we get off earlier/premake dough in the morning.'],
+        'Saturday': ['Work AM - Cell tools output to Yolo format','Vitcoria\'s Family - Bring Easter eggs, iPad for reading microscopy/writing paper'],
         'Sunday': ['Vitcoria\'s Family All Day - In morning there may be time to work on paper'],
-        'Monday': ['Vitcoria\'s Family - Leave by 4pm and get back to leamington at 6pm. What dinner?',
-        'Kung fu panda 4 - Book with prime, odeon coventry.'],
-        'Tuesday': ['Meet with Till - Reviewing the manuscript.', 'Yoga at 7:30PM - Need an easy to cook dinner, pasta bake?'],
-        'Wednesday': ['Tickles coming - Work from home?', 'Evening Meal - Need to book.'], // Example of a day with no tasks
-        'Thursday': ['Lab Meeting - Paper review or presenting?']
+        'Monday': ['Vitcoria\'s Family - Leave by 4pm and get back to leamington at 6pm. Pork with udon + avocado dinner',
+        'Kung fu panda 4 - Book with prime, check time with mahir, probs 19:20, odeon coventry.', 'Make lunch night before - tuna pitta'],
+        'Tuesday': ['Meet with Till - Reviewing the manuscript.', 'Yoga at 7:30PM - Chicken pasta bake first'],
+        'Wednesday': ['Align lattice finder - inverted epiflourescent', 'Tickles coming - What time?', 'Evening Meal - Need to book otto for 7pm.'], // Example of a day with no tasks
+        'Thursday': ['Lab Meeting - Paper review or presenting?', 'Climbing - check with Sara']
     };
 
     const weekContainer = document.querySelector('.week-container');
