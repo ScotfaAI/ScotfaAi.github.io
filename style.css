@@ -322,60 +322,61 @@ nav {
     margin-bottom: 1rem; /* Reduced bottom margin to decrease vertical spacing */
     color: #666; /* Optional: Adjust the color to differentiate the date from other text */
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .split-container {
     display: flex;
-    align-items: stretch;
-    margin-top: 20px;
+    flex-wrap: wrap;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto; /* Center the container with some vertical space */
+    overflow: hidden; /* To ensure nothing overflows outside this container */
 }
 
 .left-section, .right-section {
-    flex: 1;  /* Ensure both sections take equal space */
+    flex: 1 1 50%; /* Default to take half space each */
     padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .left-section {
-    background: white;
+    background-color: #ffffff; /* Set a background color for contrast */
 }
 
 .right-section {
-    background: #ddd;
+    background-color: #dddddd; /* Set a background color for contrast */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Hide overflow to respect the clip-path */
 }
 
 .image-container {
-    width: 100%;  /* Ensures the container fills its parent space */
-    padding-top: 75%;  /* Maintains a 3:4 aspect ratio (portrait) */
+    width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Important for the clip-path */
 }
 
 .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120%;
-    height: 120%;
-    object-fit: cover;
-    object-position: center;  /* Keeps the center of the image aligned with the center of the container */
-    clip-path: inset(0% 20% 20% 25%);  /* Symmetric clipping for top and bottom, less on sides */
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area */
+    object-position: center; /* Center the image within its container */
+
 }
 
 @media (max-width: 768px) {
-    .image-container, .left-section {
-        width: 100%;
-        padding-top: 133.33%;  /* Adjusts to maintain a 3:4 aspect ratio for portrait mode on mobile */
+    .split-container {
+        flex-direction: column; /* Stack sections vertically on narrow screens */
     }
 
-    .left-section {
-        padding: 20px;
+    .left-section, .right-section {
+        flex-basis: 100%; /* Allow each section to take full width */
     }
 }
-
 
 
 
