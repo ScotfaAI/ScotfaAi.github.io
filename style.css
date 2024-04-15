@@ -341,6 +341,56 @@ nav {
 .right-section {
     background: #ddd;
 }
+.image-container {
+    width: 100%;  /* Adjusts to 50% of the viewport width on larger screens */
+    padding-top: 75%; /* Adjusts the padding to maintain a 3:4 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    float: left; /* Aligns it to the left on larger screens */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inset(0% 20% 40% 25%); /* If you want to keep the clipping */
+}
+
+.left-section {
+    width: 50%; /* Takes up the remaining 50% of the width on larger screens */
+    float: right; /* Aligns it to the right on larger screens */
+    padding: 20px;
+}
+
+/* Clearfix for float */
+.split-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .image-container, .left-section {
+        width: 100%; /* Both sections take full width on small screens */
+        float: none; /* Disable floating */
+        padding-top: 0; /* Reset padding for mobile */
+    }
+
+    .image-container {
+        padding-top: 133.33%; /* Adjusts to a 3:4 aspect ratio for portrait mode on mobile */
+    }
+
+    .left-section {
+        padding: 20px; /* Adequate padding for readability */
+    }
+}
+
+
+
 
 footer {
     text-align: center;
