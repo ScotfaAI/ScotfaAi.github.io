@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Scott Brooks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">
-            <h4>ScottManager</h4>
+            <h4>ScotfaAI</h4>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="cv.html">CV</a></li>
         </ul>
@@ -22,24 +22,27 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <h1>Welcome to My Personal Website</h1>
-    <p>This is the homepage. Use the navigation to visit other pages.</p>
 
-    <!-- Timetable section -->
-    <section class="timetable">
-        <h2>Weekly Timetable</h2>
-        <div class="week-container">
-            <!-- Days and tasks will be loaded here by JavaScript -->
+    <div class="split-container">
+        <div class="left-section">
+            <header>
+                <h1>Welcome to ScottManager's Lab</h1>
+                <p>Exploring the Intersection of AI and Microscopy at the University of Warwick</p>
+            </header>
+            <section>
+                <h2>About Me</h2>
+                <p>I am a PhD student in Interdisciplinary Biomedical Sciences at the University of Warwick, focusing on the innovative integration of artificial intelligence with microscopy. My work aims to automate complex imaging processes, enhancing research capabilities and accuracy in biological studies.</p>
+                <p>Through my projects, I strive to push the boundaries of science and technology, creating smarter solutions for tomorrow's challenges in biomedical research.</p>
+            </section>
         </div>
-    </section>
-
-    <!-- Modal for task details -->
-    <div id="taskModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="taskDetails"></p>
+        <div class="right-section">
+            <img src="your-photo.jpg" alt="ScottManager" style="width: 100%; height: auto;">
         </div>
     </div>
+
+    <footer>
+        <p>Contact me at: <a href="mailto:email@warwick.ac.uk">email@warwick.ac.uk</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

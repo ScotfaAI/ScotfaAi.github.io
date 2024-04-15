@@ -322,3 +322,29 @@ nav {
     margin-bottom: 1rem; /* Reduced bottom margin to decrease vertical spacing */
     color: #666; /* Optional: Adjust the color to differentiate the date from other text */
 }
+
+.split-container {
+    display: flex;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-section {
+    background: white;
+}
+
+.right-section {
+    background: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
