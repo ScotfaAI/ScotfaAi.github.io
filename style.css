@@ -145,8 +145,13 @@ nav {
 }
 
 .post-footer a {
-    color: #0077cc;
+    color: #ffffff;
     text-decoration: none;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none; 
 }
 
 .post-footer a:hover {
